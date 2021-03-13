@@ -1,0 +1,29 @@
+@use '../../utilities/variables';
+
+.header {
+  display: flex;
+  background-color: variables.$primary;
+  align-items: center;
+  border-bottom-right-radius: 50px;
+  justify-content: space-between;
+  padding: 20px;
+
+  &-logo {
+    height: 100px;
+  }
+
+  &-links-wrappers {
+    display: flex;
+    
+
+    &-link {
+      margin: 20px;
+      font-family: 'Fredoka One', cursive;
+      letter-spacing: 0.2em;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: variables.$light-text;
+      text-transform: uppercase;
+    }
+  }
+}

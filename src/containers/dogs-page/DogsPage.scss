@@ -1,0 +1,23 @@
+@use '../../utilities/variables';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-box {
+    display: flex;
+    height: 350px;
+    width: 500px;
+    background-color: variables.$secondary;
+    border-radius: 10px;
+    margin: 40px;
+    align-items: center;
+  justify-content: center;
+
+    &-img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}
