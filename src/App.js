@@ -4,34 +4,43 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { Header } from "./components/header/Header";
-import { DogsPage } from "./containers/dogs-page/DogsPage";
-import { CatsPage } from "./containers/cats-page/CatsPage";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import Header from "./components/header/Header";
+import  DogsPage from "./containers/dogs-page/DogsPage";
+import  CatsPage  from "./containers/cats-page/CatsPage";
+import {Breeds} from "./containers/breeds/Breeds"
 
 import "./App.scss";
 
 function App() {
   return (
-    <Router>
-      <Header />
+    <Provider store={store}>
+      <Router>
+        <Header />
 
-      <Switch>
-        <Route exact path="/dog">
-          <DogsPage />
-        </Route>
+        <Switch>
+          <Route exact path="/dog">
+            <DogsPage />
+          </Route>
 
-        <Route exact path="/cat">
-          <CatsPage />
-        </Route>
+          <Route exact path="/cat">
+            <CatsPage />
+          </Route>
 
-        <Redirect
-          from="*"
-          to={{
-            pathname: "/",
-          }}
-        />
-      </Switch>
-    </Router>
+          <Route exact path="/breed">
+            <Breeds />
+          </Route>
+
+          <Redirect
+            from="*"
+            to={{
+              pathname: "/",
+            }}
+          />
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

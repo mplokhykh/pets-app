@@ -14,16 +14,30 @@
 
   &-links-wrappers {
     display: flex;
-    
-
     &-link {
       margin: 20px;
-      font-family: 'Fredoka One', cursive;
+      font-family: "Fredoka One", cursive;
       letter-spacing: 0.2em;
       font-size: 1.5em;
       text-decoration: none;
       color: variables.$light-text;
       text-transform: uppercase;
+    }
+  }
+
+  &-liked {
+    color: variables.$light-text;
+    display: flex;
+    align-items: flex-end;
+
+    &-count {
+      display: flex;
+      border-radius: 50px;
+      background-color: variables.$additional;
+      width: 20px;
+      border: 1px solid black;
+      justify-content: center;
+      align-items: flex-start;
     }
   }
 }

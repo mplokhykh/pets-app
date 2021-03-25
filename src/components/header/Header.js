@@ -1,10 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.png";
-import { titleHeader } from "../../constatns";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import { titleHeader } from "../../utilities/constatns";
 import "./Header.scss";
 
-export function Header() {
+function Header({ likedPets }) {
+  console.log(likedPets)
   return (
     <div className="header">
       <img src={Logo} alt="Logo" className="header-logo" />
@@ -20,8 +23,21 @@ export function Header() {
           </Link>
         ))}
       </div>
-
-      <div>SEARCH</div>
+      <div className="header-liked">
+        <div>
+          <FavoriteIcon fontSize="large" />
+        </div>
+        <div className="header-liked-count">{likedPets.length}</div>
+      </div>
     </div>
   );
 }
+
+const mapStateToProps = (store) => {
+  const { petsList } = store;
+  return {
+    likedPets: petsList.likedPets,
+  };
+};
+
+export default connect(mapStateToProps)(Header);
