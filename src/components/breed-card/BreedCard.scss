@@ -1,0 +1,28 @@
+@use '../../utilities/variables';
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.detail {
+  color: variables.$secondary;
+  width: 700px;
+  text-align: justify;
+  font-size: 20px;
+
+  &-additional {
+    margin: 15px 0;
+    font-style: italic;
+  }
+
+  &-rating{
+    margin: 5px 0;
+    font-size: 15px;
+  }
+}
+

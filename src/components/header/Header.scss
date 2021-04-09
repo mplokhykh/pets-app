@@ -22,6 +22,10 @@
       text-decoration: none;
       color: variables.$light-text;
       text-transform: uppercase;
+
+      &:active {
+        color: variables.$additional;
+      }
     }
   }
 
@@ -41,3 +45,4 @@
     }
   }
 }
+
