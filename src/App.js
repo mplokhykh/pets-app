@@ -43,7 +43,7 @@ function App() {
                         <BreedsList/>
                     </Route>
 
-                    <Redirect from="*" to="/" exact/>
+                    {/*<Redirect from="*" to="/" exact/>*/}
                 </Switch>
             </Router>
         </Provider>
