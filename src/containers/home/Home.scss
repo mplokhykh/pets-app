@@ -1,0 +1,22 @@
+@use '../../utilities/variables';
+
+.home{
+  display: flex;
+  margin: 50px;
+  flex-direction: column;
+}
+.wrapper-text {
+  font-family: "Poppins", sans-serif;
+  color: variables.$secondary;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+
+}
+  .link{
+    text-decoration: none;
+    color: variables.$additional;
+    margin: 5px;
+  }
+

@@ -1,0 +1,24 @@
+.page {
+  text-align: center;
+  overflow-y: hidden;
+  
+  &-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &-btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  
+}

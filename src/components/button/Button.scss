@@ -1,0 +1,37 @@
+@use '../../utilities/variables';
+
+.default-btn {
+  display: flex;
+  min-height: 20px;
+  min-width: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+  outline: none;
+  color: variables.$secondary;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$additional;
+  }
+}
+
+.round {
+  border-radius: 50px;
+  height: 100px;
+  width: 10px;
+  background-color: variables.$light-text;
+  border: 3px solid variables.$secondary;
+}
+
+//.ellipse {
+//  background-color: variables.$light-text;
+//  margin: 10px 0;
+//  border-radius: 30px;
+//  border: 3px solid variables.$additional;
+//}

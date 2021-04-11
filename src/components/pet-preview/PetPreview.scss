@@ -1,0 +1,19 @@
+@use '../../utilities/variables';
+
+.pet-preview{
+    display: flex;
+    height: 350px;
+    width: 500px;
+    background-color: variables.$secondary;
+    border-radius: 10px;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.5);
+    border: 2px solid variables.$primary;
+
+    &-img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
